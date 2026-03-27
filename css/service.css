@@ -1,0 +1,228 @@
+/* =================================
+   SERVICE PAGE — OPERA VIR ASSIST
+   Unified Global Theme
+================================= */
+
+body{
+    margin:0;
+    font-family:'Poppins',sans-serif;
+    background:var(--bg-main);
+    color:var(--text-main);
+}
+
+
+/* ================= HERO ================= */
+
+.service-hero{
+    position:relative;
+    width:100%;
+    height:70vh;
+    min-height:480px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+
+    background-repeat:no-repeat;
+    background-size:cover;
+    background-position:center;
+}
+
+/* overlay */
+.service-hero::before{
+    content:"";
+    position:absolute;
+    inset:0;
+
+    background:linear-gradient(
+        220deg,
+        rgba(26,77,172,.45),
+        rgba(0,0,0,.9)
+    );
+}
+
+.service-hero div{
+    position:relative;
+    z-index:2;
+    padding:20px;
+}
+
+.service-hero h1{
+    font-size:48px;
+    margin-bottom:12px;
+}
+
+.service-hero p{
+    max-width:700px;
+    margin:auto;
+    color:var(--text-muted);
+}
+
+
+/* ================= CONTENT ================= */
+
+.service-container{
+    max-width:1100px;
+    margin:auto;
+    padding:100px 20px;
+}
+
+.service-section{
+    margin-bottom:70px;
+}
+
+.service-section h2{
+    font-size:32px;
+    margin-bottom:15px;
+    color:var(--primary-light);
+}
+
+.service-section p{
+    line-height:1.8;
+    color:var(--text-muted);
+}
+
+
+/* ================= GRID ================= */
+
+.service-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:28px;
+    margin-top:35px;
+}
+
+
+/* ================= CARDS ================= */
+
+.service-card{
+    background:var(--surface);
+    padding:28px;
+    border-radius:14px;
+    border:1px solid var(--surface-border);
+    text-align:center;
+    backdrop-filter:blur(12px);
+
+    transition:.35s ease;
+}
+
+.service-card:hover{
+    transform:translateY(-6px);
+    box-shadow:var(--glow);
+}
+
+.service-card i{
+    color:var(--primary-light);
+    margin-bottom:12px;
+}
+
+
+/* ================= CTA BOX ================= */
+
+.cta-box{
+    text-align:center;
+    background:var(--surface);
+    padding:60px 20px;
+    border-radius:16px;
+    border:1px solid var(--surface-border);
+    backdrop-filter:blur(14px);
+}
+
+
+/* CTA BUTTON */
+
+.cta-btn{
+    text-decoration:none;
+    padding:16px 38px;
+    font-weight:600;
+    border-radius:50px;
+    color:#fff;
+
+    background:linear-gradient(
+        135deg,
+        var(--primary),
+        var(--primary-light)
+    );
+
+    display:inline-block;
+    transition:.3s ease;
+}
+
+.cta-btn:hover{
+    transform:translateY(-3px);
+    box-shadow:var(--glow);
+}
+
+
+/* ================= HERO IMAGES ================= */
+
+.hero-hr{
+    background-image:url("/images/services/hr.jpg");
+}
+
+.hero-affiliate{
+    background-image:url("../images/services/affiliate.jpg");
+}
+
+.hero-executor{
+    background-image:url("../images/services/executor.jpg");
+}
+
+.hero-digital{
+    background-image:url("../images/services/marketing.jpg");
+}
+
+.hero-support{
+    background-image:url("../images/services/support.jpg");
+}
+
+.hero-dev{
+    background-image:url("../images/services/dev.jpg");
+}
+
+.hero-ai{
+    background-image:url("../images/services/ai.jpg");
+}
+
+.hero-b2b{
+    background-image:url("../images/services/b2b.jpg");
+}
+
+.hero-b2c{
+    background-image:url("../images/services/b2c.jpg");
+}
+
+
+/* ================= MOBILE ================= */
+
+@media (max-width:900px){
+
+.service-hero{
+    height:65vh;
+    min-height:420px;
+    background-position:center 30%;
+}
+
+.service-hero h1{
+    font-size:34px;
+}
+}
+
+@media (max-width:600px){
+
+.service-hero{
+    height:60vh;
+    min-height:380px;
+    background-position:center 20%;
+}
+
+.service-hero h1{
+    font-size:28px;
+    line-height:1.2;
+}
+
+.service-hero p{
+    font-size:14px;
+}
+}

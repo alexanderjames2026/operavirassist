@@ -1,0 +1,256 @@
+/* =================================
+   CONTACT PAGE — OPERA VIR ASSIST
+   Uses Global Theme Variables
+================================= */
+
+body{
+    margin:0;
+    font-family:'Poppins',sans-serif;
+    background:var(--bg-main);
+    color:var(--text-main);
+}
+
+/* ================= HERO ================= */
+
+.contact-hero{
+    height:70vh;
+    min-height:450px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+
+    background:
+        linear-gradient(
+            220deg,
+            rgba(26,77,172,.45),
+            rgba(0,0,0,.9)
+        ),
+        url("/images/contact-hero.jpg");
+
+    background-size:cover;
+    background-position:center;
+}
+
+.hero-inner{
+    max-width:750px;
+    padding:20px;
+}
+
+.contact-hero h1{
+    font-size:48px;
+    margin-bottom:18px;
+}
+
+.contact-hero p{
+    color:var(--text-muted);
+    line-height:1.7;
+}
+
+
+/* ================= CONTACT AREA ================= */
+
+.contact-main{
+    padding:110px 20px;
+}
+
+.contact-wrapper{
+    max-width:1200px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:1fr 1.2fr;
+    gap:70px;
+}
+
+
+/* ---------- LEFT SIDE ---------- */
+
+.contact-details h2{
+    color:var(--primary-light);
+    margin-bottom:15px;
+}
+
+.contact-details p{
+    color:var(--text-muted);
+    line-height:1.8;
+}
+
+/* DETAIL CARDS */
+
+.detail-card{
+    display:flex;
+    gap:16px;
+    margin-top:25px;
+    padding:20px;
+    background:var(--surface);
+    border-radius:14px;
+    border:1px solid var(--surface-border);
+    backdrop-filter:blur(12px);
+    transition:.3s ease;
+}
+
+.detail-card:hover{
+    transform:translateY(-4px);
+    box-shadow:var(--glow);
+}
+
+.detail-card i{
+    color:var(--primary-light);
+}
+
+.detail-card span{
+    color:var(--text-muted);
+    font-size:14px;
+}
+
+
+/* ================= FORM ================= */
+
+.contactform{
+    background:var(--surface);
+    padding:45px;
+    border-radius:16px;
+    border:1px solid var(--surface-border);
+    backdrop-filter:blur(14px);
+}
+
+.contactform h2{
+    margin-bottom:28px;
+}
+
+
+/* FLOATING INPUT */
+
+.input-group{
+    position:relative;
+    margin-bottom:24px;
+}
+
+.input-group input,
+.input-group textarea{
+    width:100%;
+    padding:15px;
+    background:transparent;
+    border:1px solid var(--surface-border);
+    border-radius:10px;
+    color:var(--text-main);
+    font-family:'Poppins',sans-serif;
+}
+
+.input-group textarea{
+    resize:none;
+}
+
+.input-group label{
+    position:absolute;
+    left:14px;
+    top:14px;
+    color:var(--text-muted);
+    font-size:14px;
+    pointer-events:none;
+    transition:.25s ease;
+}
+
+/* focus animation */
+
+.input-group input:focus,
+.input-group textarea:focus{
+    outline:none;
+    border-color:var(--primary-light);
+}
+
+.input-group input:focus + label,
+.input-group textarea:focus + label,
+.input-group input:valid + label,
+.input-group textarea:valid + label{
+    top:-8px;
+    left:10px;
+    background:var(--bg-main);
+    padding:0 6px;
+    font-size:12px;
+}
+
+
+/* ================= BUTTON ================= */
+
+.send-btn{
+    width:100%;
+    padding:16px;
+    border:none;
+    border-radius:50px;
+    font-weight:600;
+    cursor:pointer;
+    color:#fff;
+
+    background:linear-gradient(
+        135deg,
+        var(--primary),
+        var(--primary-light)
+    );
+
+    transition:.3s ease;
+}
+
+.send-btn:hover{
+    transform:translateY(-3px);
+    box-shadow:var(--glow);
+}
+
+
+/* ================= CTA ================= */
+
+.contact-cta{
+    text-align:center;
+    padding:100px 20px;
+    background:#0b0b0b;
+}
+
+.contact-cta h2{
+    font-size:36px;
+}
+
+.contact-cta p{
+    color:var(--text-muted);
+    margin:15px 0 30px;
+}
+
+.cta-btn{
+    text-decoration:none;
+    padding:15px 34px;
+    border-radius:50px;
+    color:#fff;
+    font-weight:600;
+
+    background:linear-gradient(
+        135deg,
+        var(--primary),
+        var(--primary-light)
+    );
+
+    transition:.3s ease;
+}
+
+.cta-btn:hover{
+    transform:translateY(-3px);
+    box-shadow:var(--glow);
+}
+
+
+/* ================= MOBILE ================= */
+
+@media(max-width:900px){
+
+.contact-wrapper{
+    grid-template-columns:1fr;
+    gap:50px;
+}
+
+.contact-hero h1{
+    font-size:32px;
+}
+
+.contactform{
+    padding:30px;
+}
+
+}

@@ -1,0 +1,237 @@
+/* ===============================
+   ABOUT PAGE — OPERA VIR ASSIST
+   Uses global design system
+=================================*/
+
+/* ---------- LAYOUT ---------- */
+
+.container{
+    max-width:1200px;
+    margin:auto;
+    padding:90px 20px;
+}
+
+.grid-2{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:70px;
+    align-items:center;
+}
+
+/* ================= HERO ================= */
+
+.about-hero{
+    position:relative;
+    height:75vh;
+    background:url("/images/about-hero.jpg") center/cover no-repeat;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+}
+
+.hero-overlay{
+    position:absolute;
+    inset:0;
+    background:
+        linear-gradient(
+            220deg,
+            rgba(26,77,172,.45),
+            rgba(0,0,0,.85)
+        );
+}
+
+.hero-content{
+    position:relative;
+    max-width:750px;
+}
+
+.hero-content h1{
+    font-size:48px;
+    margin-bottom:18px;
+    color:var(--text-main);
+}
+
+.hero-content p{
+    color:var(--text-muted);
+    font-size:18px;
+    line-height:1.7;
+}
+
+/* ================= INTRO ================= */
+
+.about-intro{
+    background:var(--bg-main);
+}
+
+.intro-image{
+    height:420px;
+    border-radius:16px;
+    background:url("/images/about-office.jpg") center/cover no-repeat;
+    border:1px solid var(--surface-border);
+}
+
+/* ================= SECTION TITLE ================= */
+
+.section-title{
+    font-size:36px;
+    margin-bottom:35px;
+    color:var(--text-main);
+}
+
+/* ================= MVV ================= */
+
+.mvv{
+    background:#0b0b0b;
+}
+
+.mvv-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:30px;
+}
+
+.mvv-card{
+    background:var(--surface);
+    padding:35px 28px;
+    border-radius:16px;
+    text-align:center;
+    border:1px solid var(--surface-border);
+    backdrop-filter:blur(14px);
+    transition:.35s ease;
+}
+
+.mvv-card:hover{
+    transform:translateY(-6px);
+    box-shadow:var(--glow);
+}
+
+.mvv-card i{
+    color:var(--primary-light);
+    width:42px;
+    height:42px;
+    margin-bottom:18px;
+}
+
+.mvv-card h3{
+    margin-bottom:10px;
+}
+
+.mvv h2{
+    text-align: center;
+}
+
+/* ================= WHY SECTION ================= */
+
+.why{
+    background:var(--bg-main);
+}
+
+.why-image{
+    height:520px;
+    border-radius:16px;
+    background:url("/images/about-team.jpg") center/cover no-repeat;
+    border:1px solid var(--surface-border);
+}
+
+.why-content p{
+    color:var(--text-muted);
+}
+
+.why-content ul{
+    list-style:none;
+    margin:28px 0;
+}
+
+.why-content li{
+    margin-bottom:14px;
+    display:flex;
+    align-items:center;
+    gap:12px;
+    color:var(--text-muted);
+}
+
+.why-content i{
+    color:var(--primary-light);
+}
+
+/* ================= CTA ================= */
+
+.about-cta{
+    position:relative;
+    padding:120px 20px;
+    text-align:center;
+    background:url("/images/cta-bg.jpg") center/cover no-repeat;
+}
+
+.cta-overlay{
+    position:absolute;
+    inset:0;
+    background:
+        linear-gradient(
+            35deg,
+            rgba(26,77,172,.55),
+            rgba(0,0,0,.9)
+        );
+}
+
+.cta-content{
+    position:relative;
+    max-width:720px;
+    margin:auto;
+}
+
+.cta-content h2{
+    font-size:38px;
+    margin-bottom:18px;
+}
+
+.cta-content p{
+    color:var(--text-muted);
+}
+
+/* CTA BUTTON */
+
+.cta-btn{
+    display:inline-block;
+    margin-top:20px;
+    padding:15px 38px;
+    border-radius:50px;
+    text-decoration:none;
+    font-weight:600;
+    color:#fff;
+    background:linear-gradient(
+        135deg,
+        var(--primary),
+        var(--primary-light)
+    );
+    transition:.3s ease;
+}
+
+.cta-btn:hover{
+    transform:translateY(-3px);
+    box-shadow:var(--glow);
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media(max-width:900px){
+
+    .grid-2{
+        grid-template-columns:1fr;
+        gap:40px;
+    }
+
+    .mvv-grid{
+        grid-template-columns:1fr;
+    }
+
+    .hero-content h1{
+        font-size:34px;
+    }
+
+    .about-hero{
+        height:60vh;
+    }
+
+}
